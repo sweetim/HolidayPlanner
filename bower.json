@@ -1,0 +1,18 @@
+{
+  "name": "Hokaido",
+  "version": "0.0.0",
+  "authors": [
+    "Tim <hosweetim@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uikit": "~2.22.0"
+  }
+}
