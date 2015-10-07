@@ -7,3 +7,8 @@ html, body {
 #map {
     height: 100%;
 }
+
+.label {
+    color: red;
+    font-size: "12";
+}
