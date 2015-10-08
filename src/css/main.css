@@ -46,3 +46,11 @@ html, body {
     height: 200px;
     padding: 2px;
 }
+
+.image-icon {
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    padding: 0px;
+}

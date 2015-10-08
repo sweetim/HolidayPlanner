@@ -4,18 +4,18 @@ angular.module(
 	'travel.ContentCtrl', [
 		'travel.HolidayPlanService', 
 		'ColorService'
-	]).controller('ContentCtrl', function($scope, HolidayPlanService, ColorService) {
-       
+	]).controller('ContentCtrl', function($scope, $stateParams, HolidayPlanService, ColorService) {
+       var day = $stateParams.day || 0;
 
-        HolidayPlanService.getPathInfo(0).then(function(info) {
-	 		$scope.origin = HolidayPlanService.getDayPlan(0).origin;	        
-
+        HolidayPlanService.getPathInfo(day).then(function(info) {
+	 		$scope.origin = HolidayPlanService.getDayPlan(day).origin;
         	$scope.originInfo = {
-        		color: ColorService[0],
-        		info: info[0]
+        		color: ColorService[day],
+        		info: info[day]
         	};
 
-        	var waypoints = HolidayPlanService.getDayPlan(0).waypoints;
+        	var waypoints = HolidayPlanService.getDayPlan(day).waypoints;
+
         	var waypointsInfo = info.slice(1, info.length - 1).map(function(item, i) {
         		return {
         			color: ColorService[i + 1],
@@ -27,13 +27,9 @@ angular.module(
 				return (i >= waypointsInfo.length) ? a.concat(b) : a.concat(b).concat(waypointsInfo[i])
 			}, [])
 
-        	console.log(allWaypoints)
         	$scope.waypoints = allWaypoints;
 
-
-
-	        $scope.destination = HolidayPlanService.getDayPlan(0).destination;
-
+	        $scope.destination = HolidayPlanService.getDayPlan(day).destination;
         	$scope.destinationInfo = {
         		color: ColorService[info.length - 1],
         		info: info[info.length - 1]

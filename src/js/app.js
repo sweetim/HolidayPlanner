@@ -11,7 +11,7 @@ angular.module('travel', [
 
     $stateProvider
         .state('Main', {
-            url: '/',
+            url: '/:day',
             views: {
                 map: {
                     templateUrl: 'js/map/map.html',
