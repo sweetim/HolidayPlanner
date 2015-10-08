@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('travel.HolidayPlanService', [])
-    .factory('HolidayPlanService', function() {
+    .factory('HolidayPlanService', function($q) {
         var day1 = {
             origin: {
                 location: {
@@ -93,11 +93,13 @@ angular.module('travel.HolidayPlanService', [])
         all.push(day1);
 
         function generatePath(data) {
+            var result = [];
+            var next;
+
             var current = data.origin;
             var path = data.waypoints.slice();
             path.push(data.destination);
-            var result = [];
-            var next;
+            
             while (next = path.shift()) {
               result.push({
                 origin: current.location,
@@ -106,22 +108,28 @@ angular.module('travel.HolidayPlanService', [])
               });
               current = next;
             }
+
             return result;
         }
 
         function getGoogleMapPath(src) {
-            var allPath = [];
+            var promises = [];
+
             var directionsService = new google.maps.DirectionsService();
 
             src.forEach(function(path) {
+                var defer = $q.defer();
+
                 directionsService.route(path, function(response, status) {
                     if (status === google.maps.DirectionsStatus.OK) {
-                        allPath.push(response);
+                        defer.resolve(response);
                     }
                 });
+
+                promises.push(defer.promise);
             });
 
-            return allPath;
+            return $q.all(promises);
         }
 
 
@@ -132,9 +140,11 @@ angular.module('travel.HolidayPlanService', [])
             getAllPlan: function() {
                 return all;
             },
-            getPath: function(day) {
+            getMapPath: function(day) {
                 var data = all[day];
-                return generatePath(data);
+                var pathData = generatePath(data);
+
+                return getGoogleMapPath(pathData);
             }
         };
     });

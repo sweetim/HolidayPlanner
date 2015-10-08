@@ -78,8 +78,6 @@ angular.module('googleMapDirective', ['ColorService'])
 
 			scope.$watch('path', function(newValue) {
 				if (newValue) {
-					var directionsService = new google.maps.DirectionsService();
-
 					newValue.forEach(function(path, i) {
 						var directionsDisplay = new google.maps.DirectionsRenderer({
 							suppressMarkers: true,
@@ -90,13 +88,7 @@ angular.module('googleMapDirective', ['ColorService'])
 						});
 
 						directionsDisplay.setMap(map);
-
-						directionsService.route(path, function(response, status) {
-							if (status === google.maps.DirectionsStatus.OK) {
-								directionsDisplay.setDirections(response);
-								console.log(response)
-							}
-						});
+						directionsDisplay.setDirections(path);
 					});
 				}
 			});
