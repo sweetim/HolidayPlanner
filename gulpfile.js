@@ -6,14 +6,19 @@ let plugin = require('gulp-load-plugins')();
 const PATH = {
     root: './src',
     index: './src/index.html',
+    html: [
+        './src/index.html',
+        './src/**/*.html'
+    ],
     js: [
-        './src/js/*.js'
+        './src/js/*.js',
+        './src/js/**/*.js'
     ],
     css: [
         './src/css/*.css'
     ],
     get all() {
-        return this.js.concat(this.index, this.css);
+        return this.html.concat(this.js, this.css);
     }
 };
 
