@@ -106,24 +106,7 @@ angular.module('travel.HolidayPlanService', [])
                     currency: 'yen'
                 }
             },
-            waypoints: [
-                {
-                    location: {
-                        lat : 43.198707, 
-                        lng : 140.989651
-                    },
-                    name: 'Otaru',
-                    link: 'http://www.japan-guide.com/e/e6700.html',
-                    description: 'Otaru (小樽) is a small harbor city, about half an hour northwest of Sapporo by train. Its beautifully preserved canal area and interesting herring mansions make Otaru a pleasant day trip from Sapporo or a nice stop en route to or from Niseko or the Shakotan Peninsula.',
-                    time: '10.00 pm',
-                    date: '17 Oct 2015',
-                    duration: '3 hour',
-                    type: 'poi',
-                    images: [
-                        'http://www.japan-guide.com/g3/6706_01.jpg',
-                        'http://www.japan-guide.com/g10/destination_otaru_top.jpg',
-                    ]
-                },                
+            waypoints: [           
                 {
                     location: {
                         lat : 43.199702, 
@@ -132,7 +115,7 @@ angular.module('travel.HolidayPlanService', [])
                     name: 'Sakaimachi Street',
                     link: 'http://www.japan-guide.com/e/e5307.html',
                     description: 'Sakaimachi Street (境町通り, Sakaimachi Dōri) is an attractive, preserved merchant street in central Otaru, a short walk from the citys canal area. During the development of Hokkaido in the late 1800s and early 1900s, Otaru thrived as a port city, and many trading and shipping companies constructed impressive Western style buildings in the city center to house their offices and shops.',
-                    time: '2.00 pm',
+                    time: '9.30 pm',
                     date: '17 Oct 2015',
                     duration: '1 hour',
                     type: 'poi',
@@ -140,6 +123,23 @@ angular.module('travel.HolidayPlanService', [])
                         'http://www.japan-guide.com/g3/6704_02.jpg',
                         'http://www.japan-guide.com/g3/6704_04.jpg',
                         'http://www.japan-guide.com/g3/6704_01.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 43.237783, 
+                        lng : 141.015708,
+                    },
+                    name: 'Herring Mansions (Nishin Goten)',
+                    link: 'http://www.japan-guide.com/e/e6703.html',
+                    description: 'The herring fishing industry played a major role in the history of Otaru since the early days of the towns development, with the vast majority of fish being processed into fertilizer rather than consumed by humans. Large fortunes were made by the leading fishing enterprises until the 1950s, when the herring stocks dramatically declined and the industry collapsed.',
+                    time: '11.00 am',
+                    date: '17 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/6703_11.jpg',
+                        'http://www.japan-guide.com/g3/6703_02.jpg'
                     ]
                 },
                 {
@@ -150,31 +150,14 @@ angular.module('travel.HolidayPlanService', [])
                     name: 'Nikka Whisky Yoichi Distillery',
                     link: 'http://www.japan-guide.com/e/e6707.html',
                     description: 'Nikka Whisky, one of Japans top whisky makers, has its main distillery in Yoichi, the neighboring town of Otaru. The company was founded by Taketsuru Masataka, known as the father of Japanese whisky, who studied whisky making techniques for several years in Scotland before bringing the trade to Japan. He was instrumental in establishing the countrys first whisky distillery, the Yamazaki Distillery near Kyoto, before he set out on his own to start Nikka Whisky here in Hokkaido.',
-                    time: '3.00 pm',
+                    time: '1.00 pm',
                     date: '17 Oct 2015',
-                    duration: '2 hour',
+                    duration: '1 hour',
                     type: 'poi',
                     images: [
                         'http://www.japan-guide.com/g8/6707_02.jpg',
                         'http://www.japan-guide.com/g8/6707_03.jpg',
                         'http://www.japan-guide.com/g8/6707_01.jpg'
-                    ]
-                },
-                {
-                    location: {
-                        lat : 43.237783, 
-                        lng : 141.015708,
-                    },
-                    name: 'Herring Mansions (Nishin Goten)',
-                    link: 'http://www.japan-guide.com/e/e6703.html',
-                    description: 'The herring fishing industry played a major role in the history of Otaru since the early days of the towns development, with the vast majority of fish being processed into fertilizer rather than consumed by humans. Large fortunes were made by the leading fishing enterprises until the 1950s, when the herring stocks dramatically declined and the industry collapsed.',
-                    time: '3.00 pm',
-                    date: '17 Oct 2015',
-                    duration: '2 hour',
-                    type: 'poi',
-                    images: [
-                        'http://www.japan-guide.com/g3/6703_11.jpg',
-                        'http://www.japan-guide.com/g3/6703_02.jpg'
                     ]
                 },
                 {
@@ -185,7 +168,7 @@ angular.module('travel.HolidayPlanService', [])
                     name: 'Otaru Canal',
                     link: 'http://www.japan-guide.com/e/e5307.html',
                     description: 'Otaru Canal (小樽運河, Otaru Unga) was a central part of the citys busy port in the first half of the 20th century. Large vessels were unloaded by smaller ships, which then transported the goods to warehouses along the canal',
-                    time: '2.00 pm',
+                    time: '3.30 pm',
                     date: '17 Oct 2015',
                     duration: '1 hour',
                     type: 'poi',
@@ -203,10 +186,204 @@ angular.module('travel.HolidayPlanService', [])
                 description: 'stay in this hotel for 2 nights',
                 type: 'hotel',
                 link: 'http://www.apahotel.com/hotel/hokkaido/04_resort-sapporo/',
-                time: '8.00 pm',
+                time: '6.00 pm',
                 date: '17 Oct 2015',
                 hotel: {
                     price: 29300,
+                    currency: 'yen'
+                }
+            }
+        };
+
+        var day3 = {
+            origin: {
+                location: {
+                    lat : 42.994680,
+                    lng : 141.334379,
+                },
+                name: 'APA Hotel & Resort Sapporo',
+                description: 'stay in this hotel for 2 nights',
+                type: 'hotel',
+                link: 'http://www.apahotel.com/hotel/hokkaido/04_resort-sapporo/',
+                time: '8.00 am',
+                date: '18 Oct 2015',
+                hotel: {
+                    price: 29300,
+                    currency: 'yen'
+                }
+            },
+            waypoints: [           
+                {
+                    location: {
+                        lat : 42.496654, 
+                        lng : 141.145146
+                    },
+                    name: 'Jigokudani (Hell Valley)',
+                    link: 'http://www.japan-guide.com/e/e6751.html',
+                    description: 'Jigokudani or "Hell Valley" is a spectacular, appropriately named valley just above the town of Noboribetsu Onsen, which displays hot steam vents, sulfurous streams and other volcanic activity. It is a main source of Noboribetsus hot spring waters.',
+                    time: '11.00 am',
+                    date: '18 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/6750_01.jpg',
+                        'http://www.japan-guide.com/g2/6751_01.jpg',
+                        'http://www.japan-guide.com/g2/6751_02.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 42.551720, 
+                        lng : 140.764744,
+                    },
+                    name: 'Lake Toya',
+                    link: 'http://www.japan-guide.com/e/e6725.html',
+                    description: 'Lake Toya (洞爺湖, Tōyako) is part of the Shikotsu-Toya National Park. In addition to the lake itself, the Toyako region features hot springs and an active volcano, Mount Usu, which last erupted in the year 2000. The area also offers many fishing, hiking, and camping opportunities.',
+                    time: '2.00 pm',
+                    date: '18 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g10/destination_toya_top.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 41.759482, 
+                        lng : 140.703472,
+                    },
+                    name: 'Mount Hakodate',
+                    link: 'http://www.japan-guide.com/e/e5354.html',
+                    description: 'Catch sunset here at Mount Hakodate (函館山, Hakodateyama) is a 334 meter high, wooded mountain at the southern end of the peninsula on which much of central Hakodate is located. On clear days and nights, in particular, the views from the mountain are spectacular and included among Japans three best night views alongside the views from Nagasakis Mount Inasa and Kobes Mount Rokko.',
+                    time: '5.00 pm',
+                    date: '18 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/5350_01.jpg',
+                        'http://www.japan-guide.com/g3/5354_03.jpg'
+                    ]
+                }
+            ],
+            destination: {
+                location: {
+                    lat : 41.770268, 
+                    lng : 140.733235,
+                },
+                name: 'Super Hotel Hakodate',
+                description: 'stay in this hotel for 2 nights',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/superhotelhakodate.html?aid=304142;label=gen173nr-17CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQHoAQH4AQI;sid=91bd6558932844b847a322733af6bdb8;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '6.00 pm',
+                date: '18 Oct 2015',
+                hotel: {
+                    price: 16490,
+                    currency: 'yen'
+                }
+            }
+        };
+
+        var day4 = {
+            origin: {
+                location: {
+                    lat : 41.770268, 
+                    lng : 140.733235,
+                },
+                name: 'Super Hotel Hakodate',
+                description: 'stay in this hotel for 2 nights',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/superhotelhakodate.html?aid=304142;label=gen173nr-17CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQHoAQH4AQI;sid=91bd6558932844b847a322733af6bdb8;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '8.00 am',
+                date: '19 Oct 2015',
+                hotel: {
+                    price: 16490,
+                    currency: 'yen'
+                }
+            },
+            waypoints: [           
+                {
+                    location: {
+                        lat : 41.772384, 
+                        lng : 140.725369
+                    },
+                    name: 'Morning Market',
+                    link: 'http://www.japan-guide.com/e/e5353.html',
+                    description: 'The Hakodate Morning Market (函館朝市, Hakodate Asaichi) is held daily from 5am (from 6am during winter) to noon, just a few steps away from JR Hakodate Station. The market area spans about four city blocks.',
+                    time: '8.30 am',
+                    date: '19 Oct 2015',
+                    duration: '2 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/5353_01.jpg',
+                        'http://www.japan-guide.com/g2/5353_03.jpg',
+                        'http://www.japan-guide.com/g2/5353_02.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 41.765091, 
+                        lng : 140.710666
+                    },
+                    name: 'Motomachi',
+                    link: 'http://www.japan-guide.com/e/e6725.html',
+                    description: 'The harbor of Hakodate was one of the first to be opened to foreign trade in 1854 after Japans era of isolation had come to an end. As a result, many traders from Russia, China and Western countries moved to Hakodate. Motomachi, at the foot of Mount Hakodate, became a district favored among the new foreign residents.',
+                    time: '11.00 am',
+                    date: '19 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/5351_01.jpg',
+                        'http://www.japan-guide.com/g2/5351_02.jpg',
+                        'http://www.japan-guide.com/g2/5351_03.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 41.765827, 
+                        lng : 140.715709,
+                    },
+                    name: 'Red Brick Warehouses',
+                    link: 'http://www.japan-guide.com/e/e5357.html',
+                    description: 'Hakodate Port was among the first Japanese ports to be opened to international trade towards the end of the Edo Period (1600-1867). Several red brick warehouses from past trading days survive along the waterfront in the bay area of Hakodate, and have recently been redeveloped into an atmospheric shopping, dining and entertainment complex.',
+                    time: '12.00 pm',
+                    date: '19 Oct 2015',
+                    duration: '0.5 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/5357_01.jpg'
+                    ]
+                },                                
+                {
+                    location: {
+                        lat : 41.440146, 
+                        lng : 140.136119,
+                    },
+                    name: 'Matsumae',
+                    link: 'http://www.japan-guide.com/e/e5380.html',
+                    description: 'Matsumae (松前) is a former castle town just west of Cape Shirakami, the southernmost point of Hokkaido. Only 20 kilometers across the Tsugaru Strait from Aomori, Matsumae was the northern limit of Japan during the Edo Period and the sole feudal fief on the otherwise wild, untamed frontier of Hokkaido. The prosperous, 30,000 person town attracted merchants engaged in the shipping trade, and was protected by a garrison at Matsumae Castle, the only Japanese style castle to have been built on Hokkaido.',
+                    time: '3.00 pm',
+                    date: '19 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g8/5380_04.jpg',
+                        'http://www.japan-guide.com/g8/5380_13.jpg'
+                    ]
+                }
+            ],
+            destination: {
+                location: {
+                    lat : 41.770268, 
+                    lng : 140.733235,
+                },
+                name: 'Super Hotel Hakodate',
+                description: 'stay in this hotel for 2 nights',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/superhotelhakodate.html?aid=304142;label=gen173nr-17CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQHoAQH4AQI;sid=91bd6558932844b847a322733af6bdb8;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '6.00 pm',
+                date: '19 Oct 2015',
+                hotel: {
+                    price: 16490,
                     currency: 'yen'
                 }
             }
@@ -259,6 +436,8 @@ angular.module('travel.HolidayPlanService', [])
         var all = [];
         all.push(day1);
         all.push(day2);
+        all.push(day3);
+        all.push(day4);
 
         return {
             getDayPlan: function(day) {

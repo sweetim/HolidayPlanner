@@ -43,7 +43,7 @@ angular.module('googleMapDirective', ['ColorService'])
 					holidayPlan.origin.location,
 					holidayPlan.origin.name,
 					holidayPlan.origin.link,
-					'img/landing.png'
+					(holidayPlan.origin.type === 'hotel') ? 'img/hotel.png' : 'img/landing.png'
 				));
 
 				allMarkers.push(generateMarker(

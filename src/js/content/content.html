@@ -11,7 +11,11 @@
 
     <md-card>
         <md-card-content ng-style="{'background': originInfo.color}">
-            <p><img src="img/car.png" class="image-icon"></img><strong>{{originInfo.info.duration | number:0}} min</strong> [ {{originInfo.info.distance}} km ]</p>
+            <p>
+                <img src="img/car.png" class="image-icon" ng-if="(originInfo.info.duration >= 10.0)"></img>
+                <img src="img/walking.png" class="image-icon" ng-if="(originInfo.info.duration < 10.0)"></img>
+                <strong>{{originInfo.info.duration | number:0}} min</strong> [ {{originInfo.info.distance}} km ]
+            </p>
         </md-card-content>
     </md-card>
 
@@ -31,13 +35,21 @@
         </md-card-content>
 
         <md-card-content ng-style="{'background': item.color}" ng-if="(($index % 2) !== 0)">
-                <p><img src="img/car.png" class="image-icon"></img><strong>{{item.info.duration | number:0 }} min</strong> [ {{item.info.distance}} km ]</p>
+                <p> 
+                    <img src="img/car.png" class="image-icon" ng-if="(originInfo.info.duration >= 10)"></img>
+                    <img src="img/walking.png" class="image-icon" ng-if="(originInfo.info.duration < 10)"></img>
+                    <strong>{{item.info.duration | number:0 }} min</strong> [ {{item.info.distance}} km ]
+                </p>
             </md-card-content>
     </md-card>
 
     <md-card>
         <md-card-content ng-style="{'background': destinationInfo.color}">
-            <p><img src="img/car.png" class="image-icon"></img><strong>{{destinationInfo.info.duration | number:0}} min</strong> [ {{destinationInfo.info.distance}} km ]</p>
+            <p> 
+                <img src="img/car.png" class="image-icon" ng-if="(originInfo.info.duration >= 10)"></img>
+                <img src="img/walking.png" class="image-icon" ng-if="(originInfo.info.duration < 10)"></img>
+                <strong>{{destinationInfo.info.duration | number:0}} min</strong> [ {{destinationInfo.info.distance}} km ]
+            </p>
         </md-card-content>
     </md-card>
 
