@@ -10,9 +10,10 @@ angular.module(
         HolidayPlanService.getPathInfo(day).then(function(info) {
 	 		$scope.origin = HolidayPlanService.getDayPlan(day).origin;
         	$scope.originInfo = {
-        		color: ColorService[day],
-        		info: info[day]
+        		color: ColorService[0],
+        		info: info[0]
         	};
+        	
 
         	var waypoints = HolidayPlanService.getDayPlan(day).waypoints;
 
