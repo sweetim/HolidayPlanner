@@ -31,8 +31,7 @@ angular.module('travel.HolidayPlanService', [])
                     images: [
                         'http://www.japan-guide.com/g3/5303_11.jpg',
                         'http://www.japanesesearch.com/wp-content/uploads/2014/01/historical_village_of_hokkaido_sapporo.jpg',
-                        'http://www.jaist.ac.jp/~bjorner/diary/4-diary/DSC00588.JPG',
-
+                        'http://www.jaist.ac.jp/~bjorner/diary/4-diary/DSC00588.JPG'
                     ]
                 },
                 {
@@ -93,12 +92,49 @@ angular.module('travel.HolidayPlanService', [])
         var all = [];
         all.push(day1);
 
+        function generatePath(data) {
+            var current = data.origin;
+            var path = data.waypoints.slice();
+            path.push(data.destination);
+            var result = [];
+            var next;
+            while (next = path.shift()) {
+              result.push({
+                origin: current.location,
+                destination: next.location,
+                travelMode: google.maps.TravelMode.DRIVING
+              });
+              current = next;
+            }
+            return result;
+        }
+
+        function getGoogleMapPath(src) {
+            var allPath = [];
+            var directionsService = new google.maps.DirectionsService();
+
+            src.forEach(function(path) {
+                directionsService.route(path, function(response, status) {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        allPath.push(response);
+                    }
+                });
+            });
+
+            return allPath;
+        }
+
+
         return {
             getDayPlan: function(day) {
                 return all[day];
             },
             getAllPlan: function() {
                 return all;
+            },
+            getPath: function(day) {
+                var data = all[day];
+                return generatePath(data);
             }
         };
     });

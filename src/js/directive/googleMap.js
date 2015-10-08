@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('googleMapDirective', [])
-.directive('googleMap', function() {
+angular.module('googleMapDirective', ['ColorService'])
+.directive('googleMap', function(ColorService) {
 	return {
 		restrict: 'E',
 		scope: {
-			data: '='
+			data: '=',
+			path: '='
 		},
 		template: '<div flex></div>',
 		replace: true,
@@ -62,14 +63,41 @@ angular.module('googleMapDirective', [])
 				}));
 			}
 
+			var map;
+
 			scope.$watch('data', function(newValue) {
 				if (newValue) {
-					var map = new google.maps.Map(element[0], {
+					map = new google.maps.Map(element[0], {
 						center: newValue.origin.location,
 						zoom: 10
 					});
 
 					generateHolidayMarker(newValue, map);
+				}
+			});
+
+			scope.$watch('path', function(newValue) {
+				if (newValue) {
+					var directionsService = new google.maps.DirectionsService();
+
+					newValue.forEach(function(path, i) {
+						var directionsDisplay = new google.maps.DirectionsRenderer({
+							suppressMarkers: true,
+							polylineOptions: {
+								strokeColor: ColorService[i],
+								strokeWeight: 5
+							}
+						});
+
+						directionsDisplay.setMap(map);
+
+						directionsService.route(path, function(response, status) {
+							if (status === google.maps.DirectionsStatus.OK) {
+								directionsDisplay.setDirections(response);
+								console.log(response)
+							}
+						});
+					});
 				}
 			});
 		}
