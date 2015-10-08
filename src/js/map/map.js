@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('travel.MapCtrl', [])
-    .controller('MapCtrl', function($scope) {
-        $scope.title = "12";
+angular.module('travel.MapCtrl', ['travel.HolidayPlanService'])
+    .controller('MapCtrl', function($scope, HolidayPlanService) {
+        $scope.data = HolidayPlanService.getDayPlan(0);
     });

@@ -4,6 +4,49 @@ html, body {
     margin: 0;
 }
 
+.card-link {
+    text-decoration: none;
+    color: white;
+}
+
+md-card-content {
+    margin: 1px;
+}
+
+
+.origin {
+    background: #2196f3;
+    color: #fff;
+}
+
+.destination {
+    background: #f44336;
+    color: #fff;
+}
+
+.waypoints {
+    background: #ffc107;
+}
+
+.waypoints a {
+    color: black;
+}
+
+.highlight {
+    color: #f00;
+    font-weight: bold;
+}
+
 #map {
     height: 100%;
+}
+
+.image-card-container {
+    margin: 2px;
+}
+
+.image-card {
+    max-width: 100%;
+    height: 200px;
+    padding: 2px;
 }

@@ -1,1 +1,33 @@
-<h2>{{title}}</h2>
+<md-content flex>
+    <md-card>
+        <md-card-content class="origin">
+            <h2 class="md-title" flex>
+                <a ng-href="{{origin.link}}" target="_blank" class="card-link">{{origin.name}}</a>
+            </h2>
+            <p>{{origin.date}} {{origin.time}}</p>
+            <p>{{origin.description}}</p>
+        </md-card-content>
+        <md-card-content class="waypoints" ng-repeat="item in waypoints">
+            <h2 class="md-title">
+                <a ng-href="{{item.link}}" target="_blank" class="card-link">{{item.name}}</a>
+            </h2>
+            <p>{{item.date}} {{item.time}} <span class="highlight">({{item.duration}})</span></p>
+            <p>{{item.description}}</p>
+
+            <div layout="row">
+                <div ng-repeat="image in item.images" class="image-card-container">
+                    <img ng-src="{{image}}" class="image-card">
+                </div>
+            </div>
+
+
+        </md-card-content>
+        <md-card-content class="destination">
+            <h2 class="md-title">
+                <a ng-href="{{destination.link}}" target="_blank" class="card-link">{{destination.name}}</a>
+            </h2>
+            <p>{{destination.date}} {{destination.time}}</p>
+            <p>{{destination.description}}</p>
+        </md-card-content>
+    </md-card>
+</md-content>
