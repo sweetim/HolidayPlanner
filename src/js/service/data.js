@@ -89,9 +89,6 @@ angular.module('travel.HolidayPlanService', [])
             }
         };
 
-        var all = [];
-        all.push(day1);
-
         function generatePath(data) {
             var result = [];
             var next;
@@ -132,6 +129,8 @@ angular.module('travel.HolidayPlanService', [])
             return $q.all(promises);
         }
 
+        var all = [];
+        all.push(day1);
 
         return {
             getDayPlan: function(day) {
@@ -145,6 +144,37 @@ angular.module('travel.HolidayPlanService', [])
                 var pathData = generatePath(data);
 
                 return getGoogleMapPath(pathData);
+            },
+            getPathInfo: function(day) {
+                var defer = $q.defer();
+
+                var data = all[day];
+                var pathData = generatePath(data);
+
+                getGoogleMapPath(pathData).then(function(path) {
+                    var pathInfo = [];
+
+                    path.forEach(function(item) {
+                        var info = item.routes[0].legs.reduce(function(a, b) {
+                            return {
+                                duration: a.duration + b.duration.value,
+                                distance: a.distance + b.distance.value
+                            };
+                        }, {
+                            duration: 0,
+                            distance: 0
+                        });
+
+                        pathInfo.push({
+                            duration: info.duration / 60,
+                            distance: info.distance / 1000
+                        });
+                    });
+
+                    defer.resolve(pathInfo);
+                });
+
+                return defer.promise;
             }
         };
     });

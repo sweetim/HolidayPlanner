@@ -7,6 +7,8 @@
             <p>{{origin.date}} {{origin.time}}</p>
             <p>{{origin.description}}</p>
         </md-card-content>
+
+
         <md-card-content class="waypoints" ng-repeat="item in waypoints">
             <h2 class="md-title">
                 <a ng-href="{{item.link}}" target="_blank" class="card-link">{{item.name}}</a>
@@ -19,9 +21,8 @@
                     <img ng-src="{{image}}" class="image-card">
                 </div>
             </div>
-
-
         </md-card-content>
+        
         <md-card-content class="destination">
             <h2 class="md-title">
                 <a ng-href="{{destination.link}}" target="_blank" class="card-link">{{destination.name}}</a>

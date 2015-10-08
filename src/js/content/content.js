@@ -5,4 +5,8 @@ angular.module('travel.ContentCtrl', ['travel.HolidayPlanService'])
         $scope.origin = HolidayPlanService.getDayPlan(0).origin;
         $scope.waypoints = HolidayPlanService.getDayPlan(0).waypoints;
         $scope.destination = HolidayPlanService.getDayPlan(0).destination;
+
+        HolidayPlanService.getPathInfo(0).then(function(info) {
+        	console.log(info)
+        });
     });
