@@ -389,6 +389,185 @@ angular.module('travel.HolidayPlanService', [])
             }
         };
 
+        var day5 = {
+            origin: {
+                location: {
+                    lat : 41.770268, 
+                    lng : 140.733235,
+                },
+                name: 'Super Hotel Hakodate',
+                description: 'stay in this hotel for 2 nights',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/superhotelhakodate.html?aid=304142;label=gen173nr-17CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQHoAQH4AQI;sid=91bd6558932844b847a322733af6bdb8;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '8.00 am',
+                date: '20 Oct 2015',
+                hotel: {
+                    price: 16490,
+                    currency: 'yen'
+                }
+            },
+            waypoints: [           
+                {
+                    location: {
+                        lat : 41.797060, 
+                        lng : 140.756702
+                    },
+                    name: 'Fort Goryokaku',
+                    link: 'http://www.japan-guide.com/e/e5352.html',
+                    description: 'Fort Goryokaku (五稜郭, Goryōkaku) is a massive, star shaped, Western style citadel, which was built in the last years of the Edo Period for the defense of Hakodate against the imperialist threat posed by the Western powers. A few years later, the fort became the site of a civil war between an army of the shogunate and the superior troops of the newly established Meiji government.',
+                    time: '8.30 am',
+                    date: '20 Oct 2015',
+                    duration: '1.5 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/5352_02.jpg',
+                        'http://www.japan-guide.com/g3/5352_01.jpg',
+                        'http://www.japan-guide.com/g3/5352_03.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 41.980164, 
+                        lng : 140.670576
+                    },
+                    name: 'Onuma Quasi National Park (Onuma Koen)',
+                    link: 'http://www.japan-guide.com/e/e5356.html',
+                    description: 'Designated as a "quasi national park" and located only twenty kilometers north of Hakodate, Onuma Park (Onuma Koen) is known for its picturesque, island dotted lakes and majestic dormant volcano, Mount Komagatake.',
+                    time: '11.00 am',
+                    date: '20 Oct 2015',
+                    duration: '2 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/5356_01.jpg',
+                        'http://www.japan-guide.com/g2/5356_02.jpg',
+                        'http://www.japan-guide.com/g2/5356_03.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 42.807005, 
+                        lng : 140.653049,
+                    },
+                    name: 'Niseko',
+                    link: 'http://www.japan-guide.com/e/e6720.html',
+                    description: 'Niseko is the most famous ski resort in Japan, known for having tons of light powder snow, spectacular backcountry and a large number of foreigners - especially Australians - who in recent years have been responsible for popularizing the resort area with the skiing/snowboarding community outside of Japan. As a result, Nisekos resorts are very accessible and welcoming to foreign visitors, which they keep busy with plenty of vast, long ski runs, endless powder, and a growing number of after-ski activities.',
+                    time: '4.00 pm',
+                    date: '20 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g8/6720_11.jpg',
+                        'http://www.japan-guide.com/g8/6720_15.jpg'
+                    ]
+                }
+            ],
+            destination: {
+                location: {
+                    lat : 43.046495, 
+                    lng : 141.357843,
+                },
+                name: 'Business Inn Norte',
+                description: 'stay in this hotel for 1 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/business-inn-norte.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '7.00 pm',
+                date: '20 Oct 2015',
+                hotel: {
+                    price: 14850,
+                    currency: 'yen'
+                }
+            }
+        };
+
+        var day6 = {
+            origin: {
+                location: {
+                    lat : 43.046495, 
+                    lng : 141.357843,
+                },
+                name: 'Business Inn Norte',
+                description: 'stay in this hotel for 1 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/business-inn-norte.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '7.00 pm',
+                date: '21 Oct 2015',
+                hotel: {
+                    price: 14850,
+                    currency: 'yen'
+                }
+            },
+            waypoints: [           
+                {
+                    location: {
+                        lat : 41.797060, 
+                        lng : 140.756702
+                    },
+                    name: 'Fort Goryokaku',
+                    link: 'http://www.japan-guide.com/e/e5352.html',
+                    description: 'Fort Goryokaku (五稜郭, Goryōkaku) is a massive, star shaped, Western style citadel, which was built in the last years of the Edo Period for the defense of Hakodate against the imperialist threat posed by the Western powers. A few years later, the fort became the site of a civil war between an army of the shogunate and the superior troops of the newly established Meiji government.',
+                    time: '8.30 am',
+                    date: '21 Oct 2015',
+                    duration: '1.5 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/5352_02.jpg',
+                        'http://www.japan-guide.com/g3/5352_01.jpg',
+                        'http://www.japan-guide.com/g3/5352_03.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 41.980164, 
+                        lng : 140.670576
+                    },
+                    name: 'Onuma Quasi National Park (Onuma Koen)',
+                    link: 'http://www.japan-guide.com/e/e5356.html',
+                    description: 'Designated as a "quasi national park" and located only twenty kilometers north of Hakodate, Onuma Park (Onuma Koen) is known for its picturesque, island dotted lakes and majestic dormant volcano, Mount Komagatake.',
+                    time: '11.00 am',
+                    date: '21 Oct 2015',
+                    duration: '2 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/5356_01.jpg',
+                        'http://www.japan-guide.com/g2/5356_02.jpg',
+                        'http://www.japan-guide.com/g2/5356_03.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 42.807005, 
+                        lng : 140.653049,
+                    },
+                    name: 'Niseko',
+                    link: 'http://www.japan-guide.com/e/e6720.html',
+                    description: 'Niseko is the most famous ski resort in Japan, known for having tons of light powder snow, spectacular backcountry and a large number of foreigners - especially Australians - who in recent years have been responsible for popularizing the resort area with the skiing/snowboarding community outside of Japan. As a result, Nisekos resorts are very accessible and welcoming to foreign visitors, which they keep busy with plenty of vast, long ski runs, endless powder, and a growing number of after-ski activities.',
+                    time: '4.00 pm',
+                    date: '21 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g8/6720_11.jpg',
+                        'http://www.japan-guide.com/g8/6720_15.jpg'
+                    ]
+                }
+            ],
+            destination: {
+                location: {
+                    lat : 43.046495, 
+                    lng : 141.357843,
+                },
+                name: 'Court Hotel Asahikawa',
+                description: 'stay in this hotel for 3 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '7.00 pm',
+                date: '21 Oct 2015',
+                hotel: {
+                    price: 18000,
+                    currency: 'yen'
+                }
+            }
+        };
         function generatePath(data) {
             var result = [];
             var next;
@@ -438,6 +617,8 @@ angular.module('travel.HolidayPlanService', [])
         all.push(day2);
         all.push(day3);
         all.push(day4);
+        all.push(day5);
+        all.push(day6);
 
         return {
             getDayPlan: function(day) {

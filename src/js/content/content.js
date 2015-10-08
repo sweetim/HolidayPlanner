@@ -13,7 +13,6 @@ angular.module(
         		color: ColorService[0],
         		info: info[0]
         	};
-        	
 
         	var waypoints = HolidayPlanService.getDayPlan(day).waypoints;
 
