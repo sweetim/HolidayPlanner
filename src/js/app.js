@@ -68,7 +68,6 @@ var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10
 });
 
-generateHolidayMarker(holidayPlan[0]);
 
 function generateHolidayMarker(holidayPlan) {
     var allMarkers = [];
@@ -87,14 +86,24 @@ function generateHolidayMarker(holidayPlan) {
         'img/hotel.png'
     ));
 
-    for (var i = 0; i < holidayPlan.waypoints.length; i++) {
-        allMarkers.push(generateMarker(
-            holidayPlan.waypoints[i].location,
-            holidayPlan.waypoints[i].name,
-            holidayPlan.waypoints[i].link,
+    // for (var i = 0; i < holidayPlan.waypoints.length; i++) {
+    //     allMarkers.push(generateMarker(
+    //         holidayPlan.waypoints[i].location,
+    //         holidayPlan.waypoints[i].name,
+    //         holidayPlan.waypoints[i].link,
+    //         'img/poi.png'
+    //     ));
+    // }
+
+    allMarkers.push(holidayPlan.waypoints.map(function(item) {
+        return generateMarker(
+            item.location,
+            item.name,
+            item.link,
             'img/poi.png'
-        ));
-    }
+        );
+    }));
+
 
     function generateMarker(position, title, link, icon) {
         var infoWindow = generateInfoWindow(title, link);
@@ -109,16 +118,18 @@ function generateHolidayMarker(holidayPlan) {
 
         marker.addListener('click', function() {
             infoWindow.open(map, marker);
-        })
+        });
 
         return marker;
     }
 
     function generateInfoWindow(title, link) {
-        var infoHtml = '<a href="' + link + '" target="_blank">' + title + '</a>'
+        var infoHtml = '<a href="' + link + '" target="_blank">' + title + '</a>';
 
         return new google.maps.InfoWindow({
             content: infoHtml
         });
     }
 }
+
+generateHolidayMarker(holidayPlan[0]);
