@@ -3,8 +3,13 @@
         <google-map data="data" path="path"></google-map>
     </div>
 </div>
-<div ui-view="content" flex layout="row">
+<div ui-view="content" flex layout="column">    
     <md-content flex>
+        <md-card layout="row">
+            <md-button ng-repeat="day in dayLength" ng-click=changeDay($index) class="md-fab md-mini md-primary" ng-class="{'md-warn': $index == dayIndex}">
+                {{$index + 16}}
+            </md-button>
+        </md-card> 
         <md-card>
             <md-card-content class="origin">
                 <h2 class="md-title" flex>

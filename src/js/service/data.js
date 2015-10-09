@@ -549,20 +549,21 @@ angular.module('travel.HolidayPlanService', [])
                 },                
                 {
                     location: {
-                        lat : 43.573007, 
-                        lng : 142.438694,
+                        lat : 43.493672, 
+                        lng : 142.614137,
                     },
-                    name: 'Biei (Panorama Road)',
-                    link: 'http://www.japan-guide.com/e/e6828.html',
-                    description: 'Among the areas highlights is Shikisai Hill, a spacious flower park with various flower fields (including lavender), which can be viewed by walking along the trails, by renting golf or buggy carts or by taking a ride on tractor pulled wagons. In winter, snow mobiles are available. Another, smaller flower park is Kanno Farm, located along the national route which connects Biei with Furano.',
-                    time: '2.00 pm',
+                    name: 'Blue Pond (Aoiike)',
+                    link: 'http://www.japan-guide.com/e/e6832.html',
+                    description: 'The Blue Pond (青い池, Aoiike) outside the hot spring town of Shirogane Onsen is named after is deep blue color which it owes to natural minerals dissolved in the water. Not promoted as a tourist spot until recent years, the pond is part of an erosion control system that was built to prevent damage to Biei in case of an eruption by nearby Mount Tokachidake.',
+                    time: '3.00 pm',
                     date: '21 Oct 2015',
                     duration: '1 hour',
                     type: 'poi',
                     images: [
-                        'http://www.japan-guide.com/g2/6828_03.jpg',
-                        'http://www.japan-guide.com/g2/6828_05.jpg',
-                        'http://www.japan-guide.com/g2/6828_02.jpg'
+                        'http://www.japan-guide.com/g7/6832_01.jpg',
+                        'https://www.followmejapan.jp/files/packages/27/6/95aaa81189cdc593f66088d609d4c378.jpg',
+                        'http://i.ytimg.com/vi/110Jl_JK9VE/maxresdefault.jpg',
+                        'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSusKaka_K4_pfa255VwLF79ax_z54ygGjjsGHEWxz-m9Mt8laSOQ'
                     ]
                 },                
                 {
@@ -573,14 +574,31 @@ angular.module('travel.HolidayPlanService', [])
                     name: 'Biei (Panorama Road)',
                     link: 'http://www.japan-guide.com/e/e6828.html',
                     description: 'Among the areas highlights is Shikisai Hill, a spacious flower park with various flower fields (including lavender), which can be viewed by walking along the trails, by renting golf or buggy carts or by taking a ride on tractor pulled wagons. In winter, snow mobiles are available. Another, smaller flower park is Kanno Farm, located along the national route which connects Biei with Furano.',
-                    time: '2.00 pm',
+                    time: '5.00 pm',
                     date: '21 Oct 2015',
-                    duration: '1 hour',
+                    duration: 'along the way',
                     type: 'poi',
                     images: [
                         'http://www.japan-guide.com/g2/6828_03.jpg',
                         'http://www.japan-guide.com/g2/6828_05.jpg',
                         'http://www.japan-guide.com/g2/6828_02.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 43.588960, 
+                        lng : 142.466849
+                    },
+                    name: 'Biei (Patchwork Road)',
+                    link: 'http://www.japan-guide.com/e/e6828.html',
+                    description: 'Over the years, the areas beauty has attracted the attention of marketing professionals, and some trees were used in commercials or for package label designs. Among these famous trees are a row of larch trees on the Mild Seven Hill (from a cigarette commercial), a poplar named Ken and Mary Tree (from a car commercial) and the Seven Star Tree (which appeared on cigarette packages). A group of oak trees is known as the Parents and Child Tree.',
+                    time: '5.30 pm',
+                    date: '21 Oct 2015',
+                    duration: 'along the way',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/6828_02.jpg',
+                        'http://www.japan-guide.com/g2/6828_05.jpg'
                     ]
                 }
             ],
@@ -593,7 +611,7 @@ angular.module('travel.HolidayPlanService', [])
                 description: 'stay in this hotel for 3 night',
                 type: 'hotel',
                 link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
-                time: '5.00 pm',
+                time: '6.30 pm',
                 date: '21 Oct 2015',
                 hotel: {
                     price: 19000,
@@ -601,6 +619,80 @@ angular.module('travel.HolidayPlanService', [])
                 }
             }
         };
+
+        var day7 = {
+            origin: {
+                location: {
+                    lat : 43.764622, 
+                    lng : 142.360866,
+                },
+                name: 'Court Hotel Asahikawa',
+                description: 'stay in this hotel for 3 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '8.00 am',
+                date: '22 Oct 2015',
+                hotel: {
+                    price: 19000,
+                    currency: 'yen'
+                }
+            },
+            waypoints: [           
+                {
+                    location: {
+                        lat : 43.724127, 
+                        lng : 142.947170
+                    },
+                    name: 'Mount Kurodake',
+                    link: 'http://www.japan-guide.com/e/e6783.html',
+                    description: 'Mount Kurodake (黒岳, Kurodake) is a 1984 meter high peak that towers over Sounkyo Onsen in central Hokkaido. Thanks to a ropeway and chair lift, the mountain is one of the easiest accessible major peaks in Daisetsuzan National Park and a popular entry point for hikes into the interior of the national park.',
+                    time: '10.00 am',
+                    date: '22 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g9/6783_01.jpg',
+                        'http://www.japan-guide.com/g9/6783_03.jpg',
+                        'http://www.japan-guide.com/g9/6783_05.jpg'
+                    ]
+                },
+                {
+                    location: {
+                        lat : 43.728089, 
+                        lng : 142.945574
+                    },
+                    name: 'Sounkyo Onsen',
+                    link: 'http://www.japan-guide.com/e/e6777.html',
+                    description: 'Sounkyo (層雲峡, Sōunkyō) is a touristy hot spring resort town in the north of Daisetsuzan National Park. It is located in a scenic narrow gorge that is flanked by 100 meter high, forested cliffs. Sounkyo offers a pleasant village center, onsen baths and two beautiful waterfalls nearby. Sounkyo is also a good base for walks and hiking tours into the national park with ropeway access to nearby Mount Kurodake.',
+                    time: '10.00 am',
+                    date: '22 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g9/6777_11.jpg',
+                        'http://www.japan-guide.com/g9/6777_04.jpg',
+                        'http://www.japan-guide.com/g9/6777_03.jpg'
+                    ]
+                }
+            ],
+            destination: {
+                location: {
+                    lat : 43.764622, 
+                    lng : 142.360866,
+                },
+                name: 'Court Hotel Asahikawa',
+                description: 'stay in this hotel for 3 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '6.30 pm',
+                date: '22 Oct 2015',
+                hotel: {
+                    price: 19000,
+                    currency: 'yen'
+                }
+            }
+        };
+
         function generatePath(data) {
             var result = [];
             var next;
@@ -654,6 +746,7 @@ angular.module('travel.HolidayPlanService', [])
         all.push(day4);
         all.push(day5);
         all.push(day6);
+        all.push(day7);
 
         return {
             getDayPlan: function(day) {

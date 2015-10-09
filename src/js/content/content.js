@@ -4,10 +4,18 @@ angular.module(
 	'travel.ContentCtrl', [
 		'travel.HolidayPlanService', 
 		'ColorService'
-	]).controller('ContentCtrl', function($scope, $stateParams, HolidayPlanService, ColorService) {
+	]).controller('ContentCtrl', function($scope, $stateParams, $state, HolidayPlanService, ColorService) {
        var day = $stateParams.day || 0;
 
+       $scope.dayIndex = day;
        $scope.data = HolidayPlanService.getDayPlan(day);
+       $scope.dayLength = HolidayPlanService.getAllPlan();
+
+       $scope.changeDay = function(index) {
+            $state.go('Main', {
+                day: index
+            });
+       }
 
         HolidayPlanService.getPathInfo(day).then(function(info) {
             $scope.path = info.path;
