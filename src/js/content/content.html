@@ -6,6 +6,7 @@
 <div ui-view="content" flex layout="column">    
     <md-content flex>
         <md-card layout="row">
+            <h4 class="travel-date">Travel Dates</h4>
             <md-button ng-repeat="day in dayLength" ng-click=changeDay($index) class="md-fab md-mini md-primary" ng-class="{'md-warn': $index == dayIndex}">
                 {{$index + 16}}
             </md-button>
@@ -17,7 +18,7 @@
                 </h2>
                 <p>{{origin.date}} {{origin.time}}</p>
                 <p>{{origin.description}}</p>
-                <p class="price">{{origin.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
+                <p class="price" ng-if="origin.type === 'hotel'">{{origin.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
             </md-card-content>
         </md-card>
 
@@ -72,7 +73,7 @@
                 </h2>
                 <p>{{destination.date}} {{destination.time}}</p>
                 <p>{{destination.description}}</p>
-                <p class="price">{{origin.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
+                <p class="price">{{destination.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
             </md-card-content>
         </md-card>
     </md-content>

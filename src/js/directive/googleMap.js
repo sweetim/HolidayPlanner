@@ -50,7 +50,7 @@ angular.module('googleMapDirective', ['ColorService'])
 					holidayPlan.destination.location,
 					holidayPlan.destination.name,
 					holidayPlan.destination.link,
-					'img/hotel.png'
+					(holidayPlan.destination.type === 'hotel') ? 'img/hotel.png' : 'img/landing.png'
 				));
 
 				allMarkers.push(holidayPlan.waypoints.map(function(item) {
@@ -67,12 +67,14 @@ angular.module('googleMapDirective', ['ColorService'])
 
 			scope.$watch('data', function(newValue) {
 				if (newValue) {
-					map = new google.maps.Map(element[0], {
-						center: newValue.origin.location,
-						zoom: 10
-					});
+					setTimeout(function() {
+						map = new google.maps.Map(element[0], {
+							center: newValue.origin.location,
+							zoom: 10
+						});
 
-					generateHolidayMarker(newValue, map);
+						generateHolidayMarker(newValue, map);
+					}, 0);					
 				}
 			});
 

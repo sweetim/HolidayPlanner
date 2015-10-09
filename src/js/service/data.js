@@ -664,7 +664,7 @@ angular.module('travel.HolidayPlanService', [])
                     name: 'Sounkyo Onsen',
                     link: 'http://www.japan-guide.com/e/e6777.html',
                     description: 'Sounkyo (層雲峡, Sōunkyō) is a touristy hot spring resort town in the north of Daisetsuzan National Park. It is located in a scenic narrow gorge that is flanked by 100 meter high, forested cliffs. Sounkyo offers a pleasant village center, onsen baths and two beautiful waterfalls nearby. Sounkyo is also a good base for walks and hiking tours into the national park with ropeway access to nearby Mount Kurodake.',
-                    time: '10.00 am',
+                    time: '2.00 pm',
                     date: '22 Oct 2015',
                     duration: '1 hour',
                     type: 'poi',
@@ -690,6 +690,195 @@ angular.module('travel.HolidayPlanService', [])
                     price: 19000,
                     currency: 'yen'
                 }
+            }
+        };
+
+        var day8 = {
+            origin: {
+                location: {
+                    lat : 43.764622, 
+                    lng : 142.360866,
+                },
+                name: 'Court Hotel Asahikawa',
+                description: 'stay in this hotel for 3 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '8.00 am',
+                date: '23 Oct 2015',
+                hotel: {
+                    price: 19000,
+                    currency: 'yen'
+                }
+            },
+            waypoints: [           
+                {
+                    location: {
+                        lat : 43.768309, 
+                        lng : 142.479973
+                    },
+                    name: 'Asahiyama Zoo',
+                    link: 'http://www.japan-guide.com/e/e6892.html',
+                    description: 'Asahiyama Zoo (旭山動物園, Asahiyama Dōbutsuen) is a very popular zoological garden just outside of central Asahikawa City in the middle of Hokkaido. Its popularity lies in the enclosures which allow visitors to observe the animals from various angles, many of which are unique to Asahiyama Zoo.',
+                    time: '10.00 am',
+                    date: '23 Oct 2015',
+                    duration: '2 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g9/6892_01.jpg',
+                        'http://www.japan-guide.com/g2/6892_04.jpg',
+                        'http://www.japan-guide.com/g2/6892_03.jpg',
+                        'http://www.japan-guide.com/g2/6892_02.jpg',
+                        'http://www.japan-guide.com/g2/6892_07.jpg'
+                    ]
+                },
+                {
+                    location: {
+                        lat : 43.528998, 
+                        lng : 142.489131
+                    },
+                    name: 'Biei Farm',
+                    link: 'http://biei-farm.co.jp/',
+                    description: 'Got some cow and grass',
+                    time: '2.00 pm',
+                    date: '23 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://media-cdn.tripadvisor.com/media/photo-s/06/6d/47/0d/caption.jpg',
+                        'http://media-cdn.tripadvisor.com/media/photo-s/06/6d/47/0c/caption.jpg'
+                    ]
+                }
+            ],
+            destination: {
+                location: {
+                    lat : 43.764623, 
+                    lng : 142.360866,
+                },
+                name: 'Court Hotel Asahikawa',
+                description: 'stay in this hotel for 3 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '6.30 pm',
+                date: '23 Oct 2015',
+                hotel: {
+                    price: 19000,
+                    currency: 'yen'
+                }
+            }
+        };
+
+        var day9 = {
+            origin: {
+                location: {
+                    lat : 43.764622, 
+                    lng : 142.360866,
+                },
+                name: 'Court Hotel Asahikawa',
+                description: 'stay in this hotel for 3 night',
+                type: 'hotel',
+                link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
+                time: '8.00 am',
+                date: '24 Oct 2015',
+                hotel: {
+                    price: 19000,
+                    currency: 'yen'
+                }
+            },
+            waypoints: [           
+                {
+                    location: {
+                        lat : 43.070520, 
+                        lng : 141.320596
+                    },
+                    name: 'Curb Market',
+                    link: 'http://www.japan-guide.com/e/e5317.html',
+                    description: 'Curb Market (札幌場外市場, Sapporo Jōgai Ichiba) consists of nearly 80 stores and restaurants lined up along several blocks just outside of Sapporos Central Wholesale Market. One of the citys largest public markets, the Curb Market specializes in Hokkaido seafood such as crab, sea urchin, salmon roe, squid and scallops, and local produce such as corn, melons and potatoes when in season.',
+                    time: '10.00 am',
+                    date: '24 Oct 2015',
+                    duration: '2 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g7/5317_01.jpg',
+                        'http://www.japan-guide.com/g7/5317_02.jpg'
+                    ]
+                },
+                {
+                    location: {
+                        lat : 43.058383, 
+                        lng : 141.358115
+                    },
+                    name: 'Nijo Market',
+                    link: 'http://www.japan-guide.com/e/e5310.html',
+                    description: 'Nijo Market (二条市場, Nijō Ichiba) is a public market in central Sapporo that occupies about one city block. Both locals and tourists visit the market to shop for fresh local produce and seafood such as crabs, salmon eggs, sea urchin and various fresh and prepared fish.',
+                    time: '12.00 pm',
+                    date: '24 Oct 2015',
+                    duration: '2 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/5310_01.jpg',
+                    ]
+                },
+                {
+                    location: {
+                        lat : 43.065692, 
+                        lng : 141.363021
+                    },
+                    name: 'Sapporo Factory',
+                    link: 'http://www.japan-guide.com/e/e5314.html',
+                    description: 'Sapporo Factory is a large shopping and entertainment complex that was opened in 1993 in central Sapporo. There are about 160 establishments that include clothing stores, souvenir shops, restaurants, cafes and a multi-screen movie theater. The shops are concentrated around a five story atrium that provides visitors a refreshing and spacious atmosphere.',
+                    time: '2.00 pm',
+                    date: '24 Oct 2015',
+                    duration: '2 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/5314_02.jpg',
+                    ]
+                },
+                {
+                    location: {
+                        lat : 43.059963, 
+                        lng : 141.348395
+                    },
+                    name: 'Odori Park',
+                    link: 'http://www.japan-guide.com/e/e5301.html',
+                    description: 'Odori Park (大通公園, Ōdōri Kōen) is the broad median of Odori ("large street") in the center of Sapporo, separating the city into north and south. The park stretches about a kilometer and a half over twelve city blocks and offers pleasant green space during the warmer months. In early February, the park serves as the main site of the Sapporo Snow Festival.',
+                    time: '5.00 pm',
+                    date: '24 Oct 2015',
+                    duration: '10 minutes',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/2163_04.jpg'
+                    ]
+                },
+                {
+                    location: {
+                        lat : 43.062562, 
+                        lng : 141.353747
+                    },
+                    name: 'Clock Tower (Tokeidai)',
+                    link: 'http://www.japan-guide.com/e/e5302.html',
+                    description: 'The Clock Tower (時計台, Tokeidai) is a symbol of Sapporo. The building was constructed during the early period of Sapporos development in 1878 as a drill hall of the Sapporo Agricultural College. In 1881 a clock purchased from Boston was installed.',
+                    time: '7.00 pm',
+                    date: '24 Oct 2015',
+                    duration: '10 minutes',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g3/5302_01.jpg',
+                        'http://www.japan-guide.com/g3/5302_02.jpg'
+                    ]
+                }
+            ],
+            destination: {
+                location: {
+                    lat : 42.792590,
+                    lng: 141.670468
+                },
+                name: 'Sapporo Airport',
+                description: 'meet in airport and pick up rental car',
+                type: 'airport',
+                link: 'http://www.new-chitose-airport.jp/en/',
+                time: '10.00 am',
+                date: '24 Oct 2015'
             }
         };
 
@@ -747,6 +936,8 @@ angular.module('travel.HolidayPlanService', [])
         all.push(day5);
         all.push(day6);
         all.push(day7);
+        all.push(day8);
+        all.push(day9);
 
         return {
             getDayPlan: function(day) {
