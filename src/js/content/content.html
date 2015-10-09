@@ -1,65 +1,76 @@
-<md-content flex>
-    <md-card>
-        <md-card-content class="origin">
-            <h2 class="md-title" flex>
-                <a ng-href="{{origin.link}}" target="_blank" class="card-link">{{origin.name}}</a>
-            </h2>
-            <p>{{origin.date}} {{origin.time}}</p>
-            <p>{{origin.description}}</p>
-        </md-card-content>
-    </md-card>
+<div ui-view="map" flex="50" layout="row">
+    <div layout="row" flex>
+        <google-map data="data" path="path"></google-map>
+    </div>
+</div>
+<div ui-view="content" flex layout="row">
+    <md-content flex>
+        <md-card>
+            <md-card-content class="origin">
+                <h2 class="md-title" flex>
+                    <a ng-href="{{origin.link}}" target="_blank" class="card-link">{{origin.name}}</a>
+                </h2>
+                <p>{{origin.date}} {{origin.time}}</p>
+                <p>{{origin.description}}</p>
+                <p class="price">{{origin.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
+            </md-card-content>
+        </md-card>
 
-    <md-card>
-        <md-card-content ng-style="{'background': originInfo.color}">
-            <p>
-                <img src="img/car.png" class="image-icon" ng-if="(originInfo.info.duration >= 6)"></img>
-                <img src="img/walking.png" class="image-icon" ng-if="(originInfo.info.duration < 6)"></img>
-                <strong>{{originInfo.info.duration | number:0}} min</strong> [ {{originInfo.info.distance}} km ]
-            </p>
-        </md-card-content>
-    </md-card>
-
-    <md-card ng-repeat="item in waypoints">
-        <md-card-content class="waypoints" ng-if="(($index % 2) === 0)">
-            <h2 class="md-title">
-                <a ng-href="{{item.link}}" target="_blank" class="card-link">{{item.name}}</a>
-            </h2>
-            <p>{{item.date}} {{item.time}} <span class="highlight">({{item.duration}})</span></p>
-            <p>{{item.description}}</p>
-
-            <div layout="row">
-                <div ng-repeat="image in item.images" class="image-card-container">
-                    <img ng-src="{{image}}" class="image-card">
-                </div>
-            </div>
-        </md-card-content>
-
-        <md-card-content ng-style="{'background': item.color}" ng-if="(($index % 2) !== 0)">
-                <p> 
-                    <img src="img/car.png" class="image-icon" ng-if="(item.info.duration >= 6)"></img>
-                    <img src="img/walking.png" class="image-icon" ng-if="(item.info.duration < 6)"></img>
-                    <strong>{{item.info.duration | number:0}} min</strong> [ {{item.info.distance}} km ]
+        <md-card>
+            <md-card-content ng-style="{'background': originInfo.color}">
+                <p>
+                    <img src="img/car.png" class="image-icon" ng-if="(originInfo.info.duration >= 6)"></img>
+                    <img src="img/walking.png" class="image-icon" ng-if="(originInfo.info.duration < 6)"></img>
+                    <strong>{{originInfo.info.duration | number:0}} min</strong> [ {{originInfo.info.distance}} km ]
                 </p>
             </md-card-content>
-    </md-card>
+        </md-card>
 
-    <md-card>
-        <md-card-content ng-style="{'background': destinationInfo.color}">
-            <p> 
-                <img src="img/car.png" class="image-icon" ng-if="(destinationInfo.info.duration >= 6)"></img>
-                <img src="img/walking.png" class="image-icon" ng-if="(destinationInfo.info.duration < 6)"></img>
-                <strong>{{destinationInfo.info.duration | number:0}} min</strong> [ {{destinationInfo.info.distance}} km ]
-            </p>
-        </md-card-content>
-    </md-card>
+        <md-card ng-repeat="item in waypoints">
+            <md-card-content class="waypoints" ng-if="(($index % 2) === 0)">
+                <h2 class="md-title">
+                    <a ng-href="{{item.link}}" target="_blank" class="card-link">{{item.name}}</a>
+                </h2>
+                <p>{{item.date}} {{item.time}} <span class="highlight">({{item.duration}})</span></p>
+                <p>{{item.description}}</p>
 
-    <md-card>
-        <md-card-content class="destination">
-            <h2 class="md-title">
-                <a ng-href="{{destination.link}}" target="_blank" class="card-link">{{destination.name}}</a>
-            </h2>
-            <p>{{destination.date}} {{destination.time}}</p>
-            <p>{{destination.description}}</p>
-        </md-card-content>
-    </md-card>
-</md-content>
+                <div layout="row">
+                    <div ng-repeat="image in item.images" class="image-card-container">
+                        <img ng-src="{{image}}" class="image-card">
+                    </div>
+                </div>
+            </md-card-content>
+
+            <md-card-content ng-style="{'background': item.color}" ng-if="(($index % 2) !== 0)">
+                    <p> 
+                        <img src="img/car.png" class="image-icon" ng-if="(item.info.duration >= 6)"></img>
+                        <img src="img/walking.png" class="image-icon" ng-if="(item.info.duration < 6)"></img>
+                        <strong>{{item.info.duration | number:0}} min</strong> [ {{item.info.distance}} km ]
+                    </p>
+                </md-card-content>
+        </md-card>
+
+        <md-card>
+            <md-card-content ng-style="{'background': destinationInfo.color}">
+                <p> 
+                    <img src="img/car.png" class="image-icon" ng-if="(destinationInfo.info.duration >= 6)"></img>
+                    <img src="img/walking.png" class="image-icon" ng-if="(destinationInfo.info.duration < 6)"></img>
+                    <strong>{{destinationInfo.info.duration | number:0}} min</strong> [ {{destinationInfo.info.distance}} km ]
+                </p>
+            </md-card-content>
+        </md-card>
+
+        <md-card>
+            <md-card-content class="destination">
+                <h2 class="md-title">
+                    <a ng-href="{{destination.link}}" target="_blank" class="card-link">{{destination.name}}</a>
+                </h2>
+                <p>{{destination.date}} {{destination.time}}</p>
+                <p>{{destination.description}}</p>
+                <p class="price">{{origin.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
+            </md-card-content>
+        </md-card>
+    </md-content>
+</div>
+
+

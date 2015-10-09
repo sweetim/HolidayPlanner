@@ -489,7 +489,7 @@ angular.module('travel.HolidayPlanService', [])
                 description: 'stay in this hotel for 1 night',
                 type: 'hotel',
                 link: 'https://www.booking.com/hotel/jp/business-inn-norte.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
-                time: '7.00 pm',
+                time: '8.00 am',
                 date: '21 Oct 2015',
                 hotel: {
                     price: 14850,
@@ -499,71 +499,104 @@ angular.module('travel.HolidayPlanService', [])
             waypoints: [           
                 {
                     location: {
-                        lat : 41.797060, 
-                        lng : 140.756702
+                        lat : 43.358126, 
+                        lng : 142.373617
                     },
-                    name: 'Fort Goryokaku',
-                    link: 'http://www.japan-guide.com/e/e5352.html',
-                    description: 'Fort Goryokaku (五稜郭, Goryōkaku) is a massive, star shaped, Western style citadel, which was built in the last years of the Edo Period for the defense of Hakodate against the imperialist threat posed by the Western powers. A few years later, the fort became the site of a civil war between an army of the shogunate and the superior troops of the newly established Meiji government.',
-                    time: '8.30 am',
-                    date: '21 Oct 2015',
-                    duration: '1.5 hour',
-                    type: 'poi',
-                    images: [
-                        'http://www.japan-guide.com/g3/5352_02.jpg',
-                        'http://www.japan-guide.com/g3/5352_01.jpg',
-                        'http://www.japan-guide.com/g3/5352_03.jpg'
-                    ]
-                },                
-                {
-                    location: {
-                        lat : 41.980164, 
-                        lng : 140.670576
-                    },
-                    name: 'Onuma Quasi National Park (Onuma Koen)',
-                    link: 'http://www.japan-guide.com/e/e5356.html',
-                    description: 'Designated as a "quasi national park" and located only twenty kilometers north of Hakodate, Onuma Park (Onuma Koen) is known for its picturesque, island dotted lakes and majestic dormant volcano, Mount Komagatake.',
-                    time: '11.00 am',
-                    date: '21 Oct 2015',
-                    duration: '2 hour',
-                    type: 'poi',
-                    images: [
-                        'http://www.japan-guide.com/g2/5356_01.jpg',
-                        'http://www.japan-guide.com/g2/5356_02.jpg',
-                        'http://www.japan-guide.com/g2/5356_03.jpg'
-                    ]
-                },                
-                {
-                    location: {
-                        lat : 42.807005, 
-                        lng : 140.653049,
-                    },
-                    name: 'Niseko',
-                    link: 'http://www.japan-guide.com/e/e6720.html',
-                    description: 'Niseko is the most famous ski resort in Japan, known for having tons of light powder snow, spectacular backcountry and a large number of foreigners - especially Australians - who in recent years have been responsible for popularizing the resort area with the skiing/snowboarding community outside of Japan. As a result, Nisekos resorts are very accessible and welcoming to foreign visitors, which they keep busy with plenty of vast, long ski runs, endless powder, and a growing number of after-ski activities.',
-                    time: '4.00 pm',
+                    name: 'Furano Winery',
+                    link: 'http://www.japan-guide.com/e/e6831.html',
+                    description: 'Local wine has been produced in Furano since 1972. Located on a hill overlooking the town, the Furano Winery (富良野ワイン工場, Furano Wine Kōjō) is open to the public and includes free wine tasting. Not far from the factory stands the Restaurant Winehouse where you can try the wines in combination with Western dishes.',
+                    time: '10.00 am',
                     date: '21 Oct 2015',
                     duration: '1 hour',
                     type: 'poi',
                     images: [
-                        'http://www.japan-guide.com/g8/6720_11.jpg',
-                        'http://www.japan-guide.com/g8/6720_15.jpg'
+                        'http://www.japan-guide.com/g2/6831_01.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 43.321032, 
+                        lng : 142.378947
+                    },
+                    name: 'Cheese Factory',
+                    link: 'http://www.japan-guide.com/e/e6827.html',
+                    description: 'The Furano Cheese Factory (富良野チーズ工房, Furano Cheese Kōbō) lets visitors observe the production process of the local camembert type cheese from behind windows. Cheese samples, including those of a black cheese colored by squid ink, can be tasted in the factory shop.',
+                    time: '11.00 pm',
+                    date: '21 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/6827_01.jpg',
+                        'http://www.japan-guide.com/g2/6827_02.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 43.418765, 
+                        lng : 142.427013,
+                    },
+                    name: 'Furano Flower Fields (Farm Tomita)',
+                    link: 'http://www.japan-guide.com/e/e6826.html',
+                    description: 'Nowadays, Furanos lavender fields attract large numbers of visitors to the region every summer, when the plants are in full bloom. The majority of lavender usually starts blooming in late June and reaches its peak from around mid July to early August. Less numerous, later flowering varieties of lavender remain in bloom into mid August.',
+                    time: '2.00 pm',
+                    date: '21 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://en.visit-hokkaido.jp/planyourtrip/modelcourse/img/course06_mainimg.jpg',
+                        'http://www.furanotourism.com/spro_cms/upimg/l/20130324220916589_66938.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 43.573007, 
+                        lng : 142.438694,
+                    },
+                    name: 'Biei (Panorama Road)',
+                    link: 'http://www.japan-guide.com/e/e6828.html',
+                    description: 'Among the areas highlights is Shikisai Hill, a spacious flower park with various flower fields (including lavender), which can be viewed by walking along the trails, by renting golf or buggy carts or by taking a ride on tractor pulled wagons. In winter, snow mobiles are available. Another, smaller flower park is Kanno Farm, located along the national route which connects Biei with Furano.',
+                    time: '2.00 pm',
+                    date: '21 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/6828_03.jpg',
+                        'http://www.japan-guide.com/g2/6828_05.jpg',
+                        'http://www.japan-guide.com/g2/6828_02.jpg'
+                    ]
+                },                
+                {
+                    location: {
+                        lat : 43.573007, 
+                        lng : 142.438694,
+                    },
+                    name: 'Biei (Panorama Road)',
+                    link: 'http://www.japan-guide.com/e/e6828.html',
+                    description: 'Among the areas highlights is Shikisai Hill, a spacious flower park with various flower fields (including lavender), which can be viewed by walking along the trails, by renting golf or buggy carts or by taking a ride on tractor pulled wagons. In winter, snow mobiles are available. Another, smaller flower park is Kanno Farm, located along the national route which connects Biei with Furano.',
+                    time: '2.00 pm',
+                    date: '21 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g2/6828_03.jpg',
+                        'http://www.japan-guide.com/g2/6828_05.jpg',
+                        'http://www.japan-guide.com/g2/6828_02.jpg'
                     ]
                 }
             ],
             destination: {
                 location: {
-                    lat : 43.046495, 
-                    lng : 141.357843,
+                    lat : 43.764622, 
+                    lng : 142.360866,
                 },
                 name: 'Court Hotel Asahikawa',
                 description: 'stay in this hotel for 3 night',
                 type: 'hotel',
                 link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
-                time: '7.00 pm',
+                time: '5.00 pm',
                 date: '21 Oct 2015',
                 hotel: {
-                    price: 18000,
+                    price: 19000,
                     currency: 'yen'
                 }
             }
@@ -602,9 +635,9 @@ angular.module('travel.HolidayPlanService', [])
 
                         return;
                     } 
-
+                    console.log(status);
                     defer.reject(status);
-                });
+                });                
 
                 promises.push(defer.promise);
             });
@@ -612,6 +645,8 @@ angular.module('travel.HolidayPlanService', [])
             return $q.all(promises);
         }
 
+        var googleMapCache = [];
+        
         var all = [];
         all.push(day1);
         all.push(day2);
@@ -659,7 +694,10 @@ angular.module('travel.HolidayPlanService', [])
                         });
                     });
 
-                    defer.resolve(pathInfo);
+                    defer.resolve({
+                        path: path,
+                        pathInfo: pathInfo
+                    });
                 });
 
                 return defer.promise;

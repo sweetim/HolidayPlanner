@@ -7,16 +7,20 @@ angular.module(
 	]).controller('ContentCtrl', function($scope, $stateParams, HolidayPlanService, ColorService) {
        var day = $stateParams.day || 0;
 
+       $scope.data = HolidayPlanService.getDayPlan(day);
+
         HolidayPlanService.getPathInfo(day).then(function(info) {
+            $scope.path = info.path;
+
 	 		$scope.origin = HolidayPlanService.getDayPlan(day).origin;
         	$scope.originInfo = {
         		color: ColorService[0],
-        		info: info[0]
+        		info: info.pathInfo[0]
         	};
 
         	var waypoints = HolidayPlanService.getDayPlan(day).waypoints;
 
-        	var waypointsInfo = info.slice(1, info.length - 1).map(function(item, i) {
+        	var waypointsInfo = info.pathInfo.slice(1, info.pathInfo.length - 1).map(function(item, i) {
         		return {
         			color: ColorService[i + 1],
         			info: item
@@ -31,8 +35,8 @@ angular.module(
 
 	        $scope.destination = HolidayPlanService.getDayPlan(day).destination;
         	$scope.destinationInfo = {
-        		color: ColorService[info.length - 1],
-        		info: info[info.length - 1]
+        		color: ColorService[info.pathInfo.length - 1],
+        		info: info.pathInfo[info.pathInfo.length - 1]
         	};
         });
     });
