@@ -2,7 +2,7 @@
   "name": "hokaido",
   "version": "1.0.0",
   "description": "travel info application",
-  "main": "./src/index.html",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,7 +13,6 @@
   "author": "Tim",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^0.10.0",

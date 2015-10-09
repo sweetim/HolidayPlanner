@@ -35,7 +35,7 @@ angular.module(
         		};
         	});
 
-        	var allWaypoints = waypoints.reduce((a, b, i) => {
+        	var allWaypoints = waypoints.reduce(function(a, b, i) {
 				return (i >= waypointsInfo.length) ? a.concat(b) : a.concat(b).concat(waypointsInfo[i])
 			}, [])
 
