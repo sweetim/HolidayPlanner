@@ -3,8 +3,9 @@
 angular.module(
 	'travel.ContentCtrl', [
 		'travel.HolidayPlanService', 
-		'ColorService'
-	]).controller('ContentCtrl', function($scope, $stateParams, $state, HolidayPlanService, ColorService) {
+		'ColorService',
+        'WeatherService'
+	]).controller('ContentCtrl', function($scope, $stateParams, $state, HolidayPlanService, ColorService, WeatherService) {
         var day = $stateParams.day || 0;
 
         $scope.dayIndex = day;
@@ -25,6 +26,26 @@ angular.module(
         		color: ColorService[0],
         		info: info.pathInfo[0]
         	};
+
+            WeatherService.getTemperature(
+                HolidayPlanService.getDayPlan(day).origin.location.lat, 
+                HolidayPlanService.getDayPlan(day).origin.location.lng
+            ).then(function(data) {
+                var dt = HolidayPlanService.getDayPlan(day).origin.dt;
+                var temp = data.list.filter(function(item) {
+                    return (item.dt === dt);
+                }).map(function(data) {
+                    return {
+                        temp: data.temp,
+                        icon: WeatherService.getWeatherIcon(data.weather[0].icon),
+                        description: data.weather[0].description
+                    };
+                });
+
+                console.log(temp)
+
+                $scope.temperature = temp[0];
+            });
 
         	var waypoints = HolidayPlanService.getDayPlan(day).waypoints;
 

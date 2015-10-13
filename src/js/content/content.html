@@ -11,6 +11,15 @@
                 {{$index + 16}}
             </md-button>
         </md-card> 
+
+            
+        <md-card ng-show="temperature">
+            <md-card-content class="temperature">
+                <img ng-src="{{temperature.icon}}" class="round-icon"><img> 
+                <p>{{temperature.min}} {{temperature.max}} {{temperature.description}}</p>
+            </md-card-content>
+        </md-card>
+
         <md-card ng-show="origin">
             <md-card-content class="origin">
                 <h2 class="md-title" flex>

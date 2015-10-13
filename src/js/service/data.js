@@ -13,7 +13,8 @@ angular.module('travel.HolidayPlanService', [])
                 type: 'airport',
                 link: 'http://www.new-chitose-airport.jp/en/',
                 time: '9.00 am',
-                date: '16 Oct 2015'
+                date: '16 Oct 2015',
+                dt: 1444960800
             },
             waypoints: [
                 {
@@ -118,6 +119,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'http://www.apahotel.com/hotel/hokkaido/04_resort-sapporo/',
                 time: '8.00 am',
                 date: '17 Oct 2015',
+                dt: 1445047200,
                 hotel: {
                     price: 29300,
                     currency: 'yen'
@@ -224,6 +226,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'http://www.apahotel.com/hotel/hokkaido/04_resort-sapporo/',
                 time: '8.00 am',
                 date: '18 Oct 2015',
+                dt: 1445133600,
                 hotel: {
                     price: 29300,
                     currency: 'yen'
@@ -312,6 +315,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'https://www.booking.com/hotel/jp/superhotelhakodate.html?aid=304142;label=gen173nr-17CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQHoAQH4AQI;sid=91bd6558932844b847a322733af6bdb8;dcid=4;dist=0&sb_price_type=total&type=total&',
                 time: '8.00 am',
                 date: '19 Oct 2015',
+                dt: 1445220000,
                 hotel: {
                     price: 16490,
                     currency: 'yen'
@@ -418,6 +422,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'https://www.booking.com/hotel/jp/superhotelhakodate.html?aid=304142;label=gen173nr-17CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQHoAQH4AQI;sid=91bd6558932844b847a322733af6bdb8;dcid=4;dist=0&sb_price_type=total&type=total&',
                 time: '8.00 am',
                 date: '20 Oct 2015',
+                dt: 1445306400,
                 hotel: {
                     price: 16490,
                     currency: 'yen'
@@ -508,6 +513,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'https://www.booking.com/hotel/jp/business-inn-norte.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
                 time: '8.00 am',
                 date: '21 Oct 2015',
+                dt: 1445392800,
                 hotel: {
                     price: 14850,
                     currency: 'yen'
@@ -649,6 +655,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
                 time: '8.00 am',
                 date: '22 Oct 2015',
+                dt: 1445479200,
                 hotel: {
                     price: 19000,
                     currency: 'yen'
@@ -722,6 +729,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
                 time: '8.00 am',
                 date: '23 Oct 2015',
+                dt: 1445565600,
                 hotel: {
                     price: 19000,
                     currency: 'yen'
@@ -796,6 +804,7 @@ angular.module('travel.HolidayPlanService', [])
                 link: 'https://www.booking.com/hotel/jp/court-asahikawa.html?aid=304142;label=gen173nr-15CAEoggJCAlhYSDNiBW5vcmVmaHWIAQGYATG4AQTIAQTYAQPoAQH4AQI;sid=a7d60ce8da2d1a98ff51609a4ae01387;dcid=4;dist=0&sb_price_type=total&type=total&',
                 time: '8.00 am',
                 date: '24 Oct 2015',
+                dt: 1445652000,
                 hotel: {
                     price: 19000,
                     currency: 'yen'
