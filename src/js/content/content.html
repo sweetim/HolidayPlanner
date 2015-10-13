@@ -11,7 +11,7 @@
                 {{$index + 16}}
             </md-button>
         </md-card> 
-        <md-card>
+        <md-card ng-show="origin">
             <md-card-content class="origin">
                 <h2 class="md-title" flex>
                     <a ng-href="{{origin.link}}" target="_blank" class="card-link">{{origin.name}}</a>
@@ -21,7 +21,7 @@
             </md-card-content>
         </md-card>
 
-        <md-card>
+        <md-card ng-show="originInfo">
             <md-card-content ng-style="{'background': originInfo.color}">
                 <p>
                     <img src="img/car.png" class="image-icon" ng-if="(originInfo.info.duration >= 6)"></img>
@@ -55,7 +55,7 @@
                 </md-card-content>
         </md-card>
 
-        <md-card>
+        <md-card ng-show="destinationInfo">
             <md-card-content ng-style="{'background': destinationInfo.color}">
                 <p> 
                     <img src="img/car.png" class="image-icon" ng-if="(destinationInfo.info.duration >= 6)"></img>
@@ -65,7 +65,7 @@
             </md-card-content>
         </md-card>
 
-        <md-card>
+        <md-card ng-show="destination">
             <md-card-content class="destination">
                 <h2 class="md-title">
                     <a ng-href="{{destination.link}}" target="_blank" class="card-link">{{destination.name}}</a>

@@ -12,7 +12,7 @@ angular.module('travel.HolidayPlanService', [])
                 description: 'meet in airport and pick up rental car',
                 type: 'airport',
                 link: 'http://www.new-chitose-airport.jp/en/',
-                time: '10.00 am',
+                time: '9.00 am',
                 date: '16 Oct 2015'
             },
             waypoints: [
