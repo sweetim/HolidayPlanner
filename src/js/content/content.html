@@ -10,7 +10,7 @@
                 <h2 class="md-flex">Travel Dates</h2>
             </div>
         </md-toolbar>
-        <md-tabs md-dynamic-height md-border-bottom md-selected="dayIndex">
+        <md-tabs md-dynamic-height md-border-bottom md-selected="dayIndex" class="md-whiteframe-3dp">
             <md-tab label="{{$index + 16}}" ng-repeat="day in dayLength" ng-click=changeDay($index)></md-tab>
         </md-tabs>
 
