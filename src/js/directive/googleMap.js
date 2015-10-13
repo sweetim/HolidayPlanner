@@ -13,7 +13,7 @@ angular.module('googleMapDirective', ['ColorService'])
 		link: function(scope, element, attrs) {
 			function generateHolidayMarker(holidayPlan, map) {
 				function generateMarker(position, title, link, icon) {
-					var infoWindow = generateInfoWindow(title, link);
+					var infoWindow = generateInfoWindow(title, position, link);
 
 					var marker = new google.maps.Marker({
 						position: position,
@@ -26,11 +26,14 @@ angular.module('googleMapDirective', ['ColorService'])
 						infoWindow.open(map, marker);
 					});
 
+					infoWindow.open(map, marker);
+
 					return marker;
 				}
 
-				function generateInfoWindow(title, link) {
-					var infoHtml = '<a href="' + link + '" target="_blank">' + title + '</a>';
+				function generateInfoWindow(title, position, link) {
+					var infoHtml = '<a href="' + link + '" target="_blank">' + title + '</a>' + 
+						'<p><strong>' + position.lat + '</strong></p><p><strong>' + position.lng + '</strong></p>';
 
 					return new google.maps.InfoWindow({
 						content: infoHtml
