@@ -72,7 +72,7 @@
                 </h2>
                 <p>{{destination.date}} {{destination.time}}</p>
                 <p>{{destination.description}}</p>
-                <p class="price">{{destination.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
+                <p ng-if="destination.type === 'hotel'" class="price">{{destination.hotel.price / 5}} {{origin.hotel.currency}} per person</p>
             </md-card-content>
         </md-card>
     </md-content>

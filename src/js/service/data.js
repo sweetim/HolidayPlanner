@@ -18,13 +18,30 @@ angular.module('travel.HolidayPlanService', [])
             waypoints: [
                 {
                     location: {
+                        lat : 42.787513, 
+                        lng : 141.679071,
+                    },
+                    name: 'Royce chocolate world',
+                    link: 'https://www.royce.com/contents/english_rcw/',
+                    description: 'Royce produced this new-concept chocolate shop called Royce Chocolate World. It was opened at New Chitose Airport on the 15th of July, 2011. It is the first chocolate factory and museum located inside of an airport in Japan. The fun and vibrant gift shop offers a wide range of items that you cant get anywhere else! Look for 200 varieties of very original products. Please visit and explore.',
+                    time: '10.00 am',
+                    date: '16 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'https://www.royce.com/images/pc/english/rcw/rcw_img01.jpg',
+                        'https://www.royce.com/images/pc/english/rcw/rcw_img02.jpg'
+                    ]
+                },
+                {
+                    location: {
                         lat : 43.048167,
                         lng : 141.496867,
                     },
                     name: 'Historic Vilalge of Hokkaido',
                     link: 'http://www.japan-guide.com/e/e5303.html',
                     description: 'The Historic Village of Hokkaido (開拓の村, Kaitaku no Mura) is an open air museum in the suburbs of Sapporo. It exhibits about 60 typical buildings from all over Hokkaido, dating from the Meiji and Taisho Periods (1868 to 1926), the era when Hokkaido development was carried out on a large scale. There are four different sections: a town, fishing village, farm village and a mountain village.',
-                    time: '11.00 pm',
+                    time: '11.00 am',
                     date: '16 Oct 2015',
                     duration: '1.5 hour',
                     type: 'poi',
@@ -874,10 +891,10 @@ angular.module('travel.HolidayPlanService', [])
                     lng: 141.670468
                 },
                 name: 'Sapporo Airport',
-                description: 'meet in airport and pick up rental car',
+                description: 'leaving',
                 type: 'airport',
                 link: 'http://www.new-chitose-airport.jp/en/',
-                time: '10.00 am',
+                time: '7.30 pm',
                 date: '24 Oct 2015'
             }
         };
