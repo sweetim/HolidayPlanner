@@ -5,14 +5,15 @@
 </div>
 <div ui-view="content" flex layout="column">    
     <md-content flex>
-        <md-card layout="row">
-            <h4 class="travel-date">Travel Dates</h4>
-            <md-button ng-repeat="day in dayLength" ng-click=changeDay($index) class="md-fab md-mini md-primary" ng-class="{'md-warn': $index == dayIndex}">
-                {{$index + 16}}
-            </md-button>
-        </md-card> 
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2 class="md-flex">Travel Dates</h2>
+            </div>
+        </md-toolbar>
+        <md-tabs md-dynamic-height md-border-bottom md-selected="dayIndex">
+            <md-tab label="{{$index + 16}}" ng-repeat="day in dayLength" ng-click=changeDay($index)></md-tab>
+        </md-tabs>
 
-            
         <md-card ng-show="temperature">
             <md-card-content class="temperature">
                 <div layout="row">
@@ -24,9 +25,7 @@
                         <p>[ {{temperature.temp.min}} °C  to  {{temperature.temp.max}} °C ]</p>
                         <p>{{temperature.description}}</p>
                     </div>                       
-                </div>
-
-                              
+                </div>                              
             </md-card-content>
         </md-card>
 
