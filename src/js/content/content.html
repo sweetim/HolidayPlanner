@@ -15,8 +15,21 @@
             
         <md-card ng-show="temperature">
             <md-card-content class="temperature">
-                <img ng-src="{{temperature.icon}}" class="round-icon"><img> 
-                <p>{{temperature.min}} {{temperature.max}} {{temperature.description}}</p>
+                <div layout="row">
+                <div>
+                    <img ng-src="{{temperature.icon}}" class="round-icon"><img>     
+                </div layout="row">
+                    <div layout="column" flex>
+                        <h3>{{temperature.temp.day}} °C</h3>
+                        <p>{{temperature.description}}</p>
+                    </div>              
+                    <div layout="column">
+                        <p>min: {{temperature.temp.min}} °C</p>
+                        <p>max: {{temperature.temp.max}} °C</p>
+                    </div>                        
+                </div>
+
+                              
             </md-card-content>
         </md-card>
 

@@ -20,6 +20,14 @@ html, body {
     color: #fff;
 }
 
+.temperature p {
+    margin: 0px;
+}
+
+.temperature h3 {
+    margin: 0px;
+}
+
 .destination {
     background: #f44336;
     color: #fff;
@@ -71,6 +79,7 @@ html, body {
 }
 
 .round-icon {
+    margin-right: 10px;
     background: #ECEFF1;
     display: inline-block;
     -moz-border-radius: 60px;

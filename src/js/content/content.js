@@ -41,9 +41,7 @@ angular.module(
                         description: data.weather[0].description
                     };
                 });
-
-                console.log(temp)
-
+                
                 $scope.temperature = temp[0];
             });
 
