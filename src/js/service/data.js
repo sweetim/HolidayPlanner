@@ -271,8 +271,8 @@ angular.module('travel.HolidayPlanService', [])
                 },                
                 {
                     location: {
-                        lat : 42.551720, 
-                        lng : 140.764744,
+                        lat : 42.564821, 
+                        lng : 140.816181,
                     },
                     name: 'Lake Toya',
                     link: 'http://www.japan-guide.com/e/e6725.html',
@@ -364,7 +364,7 @@ angular.module('travel.HolidayPlanService', [])
                         lng : 140.710666
                     },
                     name: 'Motomachi',
-                    link: 'http://www.japan-guide.com/e/e6725.html',
+                    link: 'http://www.japan-guide.com/e/e5351.html',
                     description: 'The harbor of Hakodate was one of the first to be opened to foreign trade in 1854 after Japans era of isolation had come to an end. As a result, many traders from Russia, China and Western countries moved to Hakodate. Motomachi, at the foot of Mount Hakodate, became a district favored among the new foreign residents.',
                     time: '11.00 am',
                     date: '19 Oct 2015',
