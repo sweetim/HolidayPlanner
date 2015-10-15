@@ -232,7 +232,25 @@ angular.module('travel.HolidayPlanService', [])
                     currency: 'yen'
                 }
             },
-            waypoints: [           
+            waypoints: [      
+                {
+                    location: {
+                        lat : 42.560957, 
+                        lng : 141.366974
+                    },
+                    name: 'Shiraoi Ainu Museum (Porotokotan)',
+                    link: 'http://www.japan-guide.com/e/e5375.html',
+                    description: 'The Shiraoi Ainu Museum (アイヌ民族博物館, Ainu Minzoku Hakubutsukan) is one of the countrys best museums about the Ainu, the indigenous people of northern Japan. The open air museum, which is also commonly known as Porotokotan (meaning large lakeside village in the Ainu language), is a replica village consisting of five thatched houses along the shore of Lake Poroto.',
+                    time: '9.30 am',
+                    date: '18 Oct 2015',
+                    duration: '1 hour',
+                    type: 'poi',
+                    images: [
+                        'http://www.japan-guide.com/g8/5375_01.jpg',
+                        'http://www.japan-guide.com/g8/5375_02.jpg',
+                        'http://www.japan-guide.com/g8/5375_03.jpg'
+                    ]
+                },      
                 {
                     location: {
                         lat : 42.496654, 
